@@ -1,0 +1,28 @@
+body{
+    background-color:rgb(94, 116, 131);
+    font-size: 20px;
+    font-family: Arial;
+    color: white;
+}
+h2,h3{
+    font-style: italic;
+    color: cyan;
+}
+ul,ol{
+    font-style: italic;
+}
+strong{
+    color: orange;
+}
+a{
+    font-size: medium;
+}
+ul li a:hover {
+    background-color:green;
+}
+ul li ul li {
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}

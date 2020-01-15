@@ -1,0 +1,35 @@
+h1{
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: Lucida Sans Unicode, Helvetica, Arial, or any sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    text-align: left;
+}
+body{
+   background-image: url('http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/silverware.jpg');
+    background-color: white;
+    color: #404040;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 11pt;
+
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: ;
+}
+
+a {
+    color: #A4A400;
+}
+
+abbr{
+    text-decoration: underline;
+}
+#main-heading{
+    text-align: center;
+}
+blockquote{
+    background-color: #ffffA8;
+    font-style: italic;
+}
