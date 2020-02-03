@@ -88,19 +88,9 @@ $(function(){
 
         $(this).css("opacity",next);
 
-
     }
 
-
-
-
-
-
-
-
-
     ,200);
-
 
 
     }
@@ -112,10 +102,5 @@ $(function(){
         $(this).css("opacity","1");
 
     }
-
-
-
-
-
 
 });
