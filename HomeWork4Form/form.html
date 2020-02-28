@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+    
+    <form action="/action_page.php" method = "get">
+        <fieldset class="form">
+        <legend>New user signe up </legend>
+        Name:  <input type="text" name="name"/><br><br>
+        <label for="lname">Gender:</label>
+        <input type="radio" name="sex" value="male" checked /> Male
+        <input type="radio" name="sex" value="female" /> Female<br><br>
+        Age:  <input type="number" name="name"/><br /><br>
+        Personality type:  <input type="text" name="name"/><a target ="_blank"href="http://www.humanmetrics.com/personality">(Don't Know Your Type?)</a><br /><br>
+        Favoirite OS   :
+        <select id="selector">
+            <Option value="add">Windows</Option>
+            <Option value="min">Mac OS X</Option>
+            <Option value="div">Linux</Option>
+        </select><br /><br>
+        
+        Seeking age:  <input type="number" size="2" name ="Min" max="99" placeholder="Min"/> to <input type="number" size="2" name="Max" max= "99" placeholder=" Max"/><br><br>
+        <input id="signUp" type="submit" value ="Sign Up"/> 
+
+        </fieldset>
+      </form>
+    
+</body>
+</html>

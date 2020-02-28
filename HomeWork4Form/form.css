@@ -1,0 +1,19 @@
+
+.form{
+    background-color:#E0E1FF;
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    float: inherit;
+}
+legend{
+    background-color: white;
+    box-shadow: 2px 2px gray;
+    border: 1px solid gray ;
+}
+#signUp{
+    background-color: pink;
+    color: black;
+    font-weight: bold;
+}
