@@ -8,77 +8,85 @@
 <body>
     <p>
 
-        1, Can post requests be bookmarked? What are the problems?
-An http post can be bookmarked but since a bookmark only consists of the URL all the form parameter will 
-be lost. This will often mean the web server does not know what to do with the request since it was
- expecting some form parameter.
-If we submit via get request, all the form parameter go into URL so bookmark will contain all the 
-information needed for the webserver to rebuild the page a second time.
-2 What is the purpose of request dispatching?
-Request dispatcher is an interface whose implementation define an object which can dispatches the request
- to any resource on the server. 
-The requestDispatcher interface provide the facility of dispatching the request to another resource it may
- be html, servlet, or jsp. This interface can also be used to include the content of another resource also. It is one of the ways of servlet collaboration.
-There are two methods defined in the requestDispatcher interface.
-a, forward(ServletRequest request, ServletResponse response) and 
-b, include(ServletRequest request, ServletResponse response).
-3,What is the difference between redirect and request dispatch?
-When a servlet does a redirect, it is like asking the client to call someone else instead. In this case,
- the client is the browser not the user. The browser makes the new call on the user’s behalf after the
-  originally requested servlet say sorry call this guy instead. The user sees a new URL in the browser.
-When a servlet does a request dispatch, it’s like asking a co-worker to take over working with a client.
-The co-worker ends up responding to the client, but the client doesn’t care as long as someone responds.
-The user never knows someone else took over, because the URL in the browser bar doesn’t change.
-4, what is an attribute?
-An attribute is an object that is used to share information in web application. Attribute allows servlet 
-to share information among themselves. Attribute can be Set and Get from one of the following.
-A, request
-B, Session
-C, Application.
-5, What is the deference between attributes and parameters?
+<p>1, Can post requests be bookmarked? What are the problems?</p>
+<p>An http post can be bookmarked but since a bookmark only consists of the URL all the form parameter will </p>
+<p>be lost. This will often mean the web server does not know what to do with the request since it was</p>
+<p>expecting some form parameter.</p>
+<p>If we submit via get request, all the form parameter go into URL so bookmark will contain all the </p>
+<p>information needed for the webserver to rebuild the page a second time.</p>
+    
+<p>2 What is the purpose of request dispatching?</p>
+<p>Request dispatcher is an interface whose implementation define an object which can dispatches the request</p>
+<p>to any resource on the server. 
+    <p>The requestDispatcher interface provide the facility of dispatching the request to another resource 
+        <p>it may
+        <p>be html, servlet, or jsp. This interface can also be used to include the content of another resource also. 
+            <p>It is one of the ways of servlet collaboration.
+                <p>There are two methods defined in the requestDispatcher interface.
+                    <p>a, forward(ServletRequest request, ServletResponse response) and 
+                        <p>b, include(ServletRequest request, ServletResponse response).
+</p>
+<p>3,What is the difference between redirect and request dispatch?
+    <p>When a servlet does a redirect, it is like asking the client to call someone else instead. In this case,
+        <p>the client is the browser not the user. The browser makes the new call on the user’s behalf after the
+            <p>originally requested servlet say sorry call this guy instead. The user sees a new URL in the browser.
+                <p>When a servlet does a request dispatch, it’s like asking a co-worker to take over working with a client.
+                    <p>The co-worker ends up responding to the client, but the client doesn’t care as long as someone responds.
+                        <p>The user never knows someone else took over, because the URL in the browser bar doesn’t change.
+</p>
+<p>4, what is an attribute?
+    <p>An attribute is an object that is used to share information in web application. Attribute allows servlet 
+        <p>to share information among themselves. Attribute can be Set and Get from one of the following.
+            <p>A, request
+                <p>B, Session
+                    <p>C, Application.</p>
+<p>5, What is the deference between attributes and parameters?</p>
 The key difference between attributes and parameters is that an attribute is a variable of any type that 
 is declared directly in a class while a parameter is a variable defined by the function that receive a
  value when it is called.
+</p>
+<p>6, What are dangers of using attributes?</P>
+ <p>• Not thread safe </p>
+<p>• Nor session attributes </p>
+</p>• Only request attributes thread safe</p>
 
-6, What are dangers of using attributes?
- • Not thread safe 
-• Nor session attributes 
-• Only request attributes thread safe
-7, What does it mean to say that http is stateless? Give an example of a stateful protocol.
-Because a stateless protocol does not require the server to retain session information or status about 
-each communications partner for the duration of multiple requests. HTTP is a stateless protocol which
- means that the connection between the browser and server is lost once the transaction is ends.
-8, Give 5 different method for maintaining state information (count each attribute scope as one method).
-• request scope: destroyed when servlet finishes processing request 
-• session scope: destroyed when user closes browser
- • application scope destroyed when Container stopped. 
-• Cookies saved on browser, temporary (deleted when the browser closes) permanent
- • Hidden fields on a form
-9, How long does a Session last?
-The default values are 1 and 100 so the garbage collector is only started in only 1% of all Session start 
-calls. That means even if the session is already timed out in theory (the session data had been changed 
-more than session.gc maxlifetime second a go), the session data can be used longer than that. Recommend 
-us to implement our own session timeout mechanism. 
+<p>7, What does it mean to say that http is stateless? Give an example of a stateful protocol.</p>
+<p>Because a stateless protocol does not require the server to retain session information or status about</p> 
+<p>>each communications partner for the duration of multiple requests. HTTP is a stateless protocol which</p>
+<p>means that the connection between the browser and server is lost once the transaction is ends.</p>
 
-10. What is a cookie, and how long does a cookie last?
-There are two types of cookies in servlet. Persistent and Non-Persistent cookies 
-Non-Persistent is valid for single session only. It is removed each time when user closes the browser.
- Persistent cookies are valid for multiple session. It is not removed each time when user closes the 
- browser. It removed only if user logout or sign out.
+<p>8, Give 5 different method for maintaining state information (count each attribute scope as one method).</p>
+<p>• request scope: destroyed when servlet finishes processing request </p>
+<p>• session scope: destroyed when user closes browser</p>
+<p>• application scope destroyed when Container stopped. </p>
+<p>• Cookies saved on browser, temporary (deleted when the browser closes) permanent</p>
+<p>• Hidden fields on a form</p>
+<p>9, How long does a Session last?</p>
+<p>The default values are 1 and 100 so the garbage collector is only started in only 1% of all Session start</p> 
+<p>calls. That means even if the session is already timed out in theory (the session data had been changed </p>
+<p>more than session.gc maxlifetime second a go), the session data can be used longer than that. Recommend </p>
+<p>us to implement our own session timeout mechanism. </p>
+</p>
+<p>
 
+<p>10. What is a cookie, and how long does a cookie last?</p>
+<p>There are two types of cookies in servlet. Persistent and Non-Persistent cookies</p> 
+<p>Non-Persistent is valid for single session only. It is removed each time when user closes the browser.</p>
+ <p>Persistent cookies are valid for multiple session. It is not removed each time when user closes the </p>
+ <p>browser. It removed only if user logout or sign out.</p>
+</p>
+<p>
 
- 11. What is the purpose of URL rewriting?
-It will always work whether cookies are disabled or not (browser independent). 
-Extra form submission is not required on each page.
- 12. Why does the request attribute report ‘null’ for the maintaining state demo?
- A reasonably likely explanation is that the requests are not in the same session.
-  Maintaining a session requires cooperation from the client, which is not guaranteed to be given. 
-  The most common mechanisms for associating requests with sessions are cookies and URL rewriting. 
-  If the client refuses cookies and is making its requests to a static URL then every request will 
-  likely be in its own session.
+ <p>11. What is the purpose of URL rewriting?</p>
+<p>It will always work whether cookies are disabled or not (browser independent). </p>
+<p>Extra form submission is not required on each page.</p>
 
-
-    </p>
+<p>12. Why does the request attribute report ‘null’ for the maintaining state demo?</p>
+ <p>A reasonably likely explanation is that the requests are not in the same session.</p>
+  <p>Maintaining a session requires cooperation from the client, which is not guaranteed to be given. </p>
+  <p>The most common mechanisms for associating requests with sessions are cookies and URL rewriting. </p>
+  <p>If the client refuses cookies and is making its requests to a static URL then every request will </p>
+  <p>likely be in its own session.</p>
     
 </body>
 </html>
